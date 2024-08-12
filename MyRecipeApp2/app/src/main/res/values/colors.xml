@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="PeriWinkle">#D4CDF4</color>
+    <color name="TeaGreen">#CAFFB9</color>
+    <color name="Green">#14803B</color>
+    <color name="SeaGreen">#0A8754</color>
+    <color name="VeryLightGreen">#ACEFD4</color>
+    <color name="Olivine">#8BBD8B</color>
+    <color name="Asparagus">#6CAE75</color>
+    <color name="Sage">#C1CC99</color>
+</resources>

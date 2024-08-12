@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.myrecipeapp.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_recipeInfo"
+            app:destination="@id/recipeInfo" >
+            <argument
+                android:name="recipeId"
+                app:argType="long"/>
+        </action>
+        <action
+            android:id="@+id/action_home2_to_addRecipe"
+            app:destination="@id/addRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeInfo"
+        android:name="com.example.myrecipeapp.RecipeInfo"
+        android:label="fragment_recipe_info"
+        tools:layout="@layout/fragment_recipe_info" >
+        <argument
+            android:name="recipeId"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_recipeInfo_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_recipeInfo_to_editRecipe"
+            app:destination="@id/editRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipe"
+        android:name="com.example.myrecipeapp.AddRecipe"
+        android:label="fragment_add_recipe"
+        tools:layout="@layout/fragment_add_recipe" >
+        <action
+            android:id="@+id/action_addRecipe_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecipe"
+        android:name="com.example.myrecipeapp.EditRecipe"
+        android:label="fragment_edit_recipe"
+        tools:layout="@layout/fragment_edit_recipe" >
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_editRecipe_to_recipeInfo"
+            app:destination="@id/recipeInfo" />
+    </fragment>
+</navigation>
